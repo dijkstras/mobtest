@@ -1,53 +1,29 @@
 @charset "UTF-8";
+html {
+	height:100%;
+}
+
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #4E5869;
+	background: #fff;
 	margin: 0;
-	padding: 0;
-	color: #000;
+	padding:0;
+	color: #aaa;
 	text-align:center;
-	height:100%;
 }
 
-/* ~~ Element/tag selectors ~~ */
-ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
-	padding-right: 15px;
-	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
-}
-a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
-	border: none;
+img {
+	max-width:95%;
+	margin-top:20%;
 }
 
-/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
-a:link {
-	color:#414958;
-	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+#knop {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding:20px 0px;
+	background-color:#ddd;
 }
-a:visited {
-	color: #4E5869;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
-	text-decoration: none;
-}
-
-/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
-.container {
-	width: 90%;
-	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 300px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
-
-	height:100%;
-	background: #FFF;
-	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
-}
-
-
 
 .myButton {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -67,8 +43,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
     font-size:22px;
     font-weight:bold;
     padding:20px;
-	width:85%;
-	margin-bottom:20px;
+	width:80%;
     text-decoration:none;
     text-shadow:1px 1px 0px #ffffff;
 }.myButton:hover {
